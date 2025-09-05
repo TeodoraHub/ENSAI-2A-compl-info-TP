@@ -3,6 +3,8 @@ from business_object.pokemon.defender_pokemon import Defender
 from business_object.pokemon.all_rounder_pokemon import AllRounder
 from business_object.statistic import Statistic
 
+from business_object.attack.abstract_attack import FixedDamageAttack
+
 # Create statistics for the following pokemon
 stats_pk1 = Statistic(100, 40, 10, 10, 10, 10)
 
@@ -15,3 +17,7 @@ pk3 = AllRounder(name="Ptitard", stat_current=stats_pk1, type_pk="Attacker")
 print(pk1)
 print(pk2)
 print(pk3)
+
+
+fixed_damage_attack = FixedDamageAttack(power=2, name="attack1", description="")
+print(fixed_damage_attack.compute_damage(pk1, pk2))

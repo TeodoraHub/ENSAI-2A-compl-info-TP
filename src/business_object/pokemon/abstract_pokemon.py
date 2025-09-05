@@ -22,6 +22,7 @@ class AbstractPokemon(ABC):
         self._stat_current: Statistic = stat_current
         self._level: int = level
         self._name: str = name
+        self.attacks: list = self.attacs
 
     # -------------------------------------------------------------------------
     # Methods
